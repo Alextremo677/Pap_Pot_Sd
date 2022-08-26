@@ -125,6 +125,8 @@ void loop() {
     Serial.print(",");
     Serial.print(stepper2.currentPosition());
     //Serial.println("Leer datos");
+
+    //Leer la SD
     myFile = SD.open("datalog.txt");//abrimos  el archivo
     if (myFile) {
       int totalBytes = myFile.size();
