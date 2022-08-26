@@ -32,7 +32,6 @@ MultiStepper steppers;
 File myFile;
 
 int UltimaPocicion = 0;
-//int pausa = 1000;
 String cadena = "";
 
 
