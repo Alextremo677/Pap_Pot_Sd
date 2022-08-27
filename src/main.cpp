@@ -206,8 +206,6 @@ void loop() {
   {
     //Borrar datos SD
     Serial.println("Borrar datos");
-    //myFile = SD.open("datalog.txt", O_TRUNC);//abrimos  el archivo
-
     SD.remove("datalog.txt");
   }
 }
