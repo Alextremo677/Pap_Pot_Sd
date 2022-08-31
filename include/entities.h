@@ -9,10 +9,13 @@ private:
 public:
     Position(uint8_t value){
         this->value = (value <= 180) ? value : 180;   
+
+        Serial.print("value2=  ");
+        Serial.println(value);
     };
 };
 
-class UserInterface {
+class UserInterface { 
 public:
     virtual Position GetPosition(); 
 };

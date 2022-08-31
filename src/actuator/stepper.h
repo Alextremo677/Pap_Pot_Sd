@@ -5,6 +5,7 @@
 
 #include <entities.h>
 #include <AccelStepper.h>
+#include <MultiStepper.h>
 
 class StepperActuador: public AccelStepper, public Actuator {
 private:
