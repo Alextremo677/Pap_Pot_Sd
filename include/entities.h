@@ -10,6 +10,9 @@ public:
     Position(uint8_t value){
         this->value = (value <= 180) ? value : 180;   
     };
+    uint8_t getValue(){//Para poder sacar los datos se agrega este getValue
+        return this->value;
+    }
 };
 
 class UserInterface {
