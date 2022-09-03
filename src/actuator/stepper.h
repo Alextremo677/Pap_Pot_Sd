@@ -16,11 +16,18 @@ public:
         uint8_t pin4, 
         bool enable = true
     ):AccelStepper(
+        /*
         AccelStepper::FULL4WIRE,
         pin1, 
         pin2, 
         pin3, 
         pin4, 
+        enable
+        */
+    //Se cambia la configuracion para usar controlador
+       AccelStepper::DRIVER,
+        pin1, 
+        pin2, 
         enable
     ), Actuator(){};
     void execute(Position);
