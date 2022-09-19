@@ -6,6 +6,8 @@
 #include <entities.h>
 #include <AccelStepper.h>
 
+#include <Servo.h>
+
 class StepperActuador: public AccelStepper, public Actuator {
 private:
 public:
@@ -35,6 +37,22 @@ public:
     void execute(Position);
 };
 
+class ServoActuator: public Servo, public Actuator {
+private:
+public:
+    ServoActuator(
+        uint8_t pin
+    ):Servo(
+        pin
+    ), Actuator(){};
+    void execute(Posicion);
+};
+
+
+
+
 void StepperActuador::execute(Position pos){}
+
+void ServoActuator::execute(Position pos){}
 
 #endif
