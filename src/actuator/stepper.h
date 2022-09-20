@@ -42,10 +42,8 @@ private:
 public:
     ServoActuator(
         uint8_t pin
-    ):Servo(
-        pin
-    ), Actuator(){};
-    void execute(Posicion);
+    );
+    void execute(Position);
 };
 
 

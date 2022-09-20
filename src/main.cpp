@@ -4,6 +4,8 @@
 
 PotentiometerInput pot = PotentiometerInput(A0);
 StepperActuador stepper = StepperActuador(1,2, true);
+ServoActuator servo1 = ServoActuator(9);
+ServoActuator servo2 = ServoActuator(10);
 
 void setup(){}
 void loop(){
