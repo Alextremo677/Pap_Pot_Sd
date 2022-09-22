@@ -37,12 +37,13 @@ public:
     void execute(Position);
 };
 
-class ServoActuator: public Servo, public Actuator {
+class ServoActuator: public Servo{
 private:
+    uint8_t pin;
 public:
-    ServoActuator(
-        uint8_t pin
-    );
+    ServoActuator(uint8_t pin){
+        this->pin=pin;
+    };
     void execute(Position);
 };
 
