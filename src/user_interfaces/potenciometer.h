@@ -16,6 +16,7 @@ class PotentiometerInput: public UserInterface {
 
 Position PotentiometerInput::GetPosition(){
     uint8_t value = map(analogRead(this->pin), 0, 1023, 0, 180);
+    void sample();
     return Position(value);
 }
 
