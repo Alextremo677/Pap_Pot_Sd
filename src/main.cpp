@@ -23,7 +23,9 @@ void loop(){
     {
         Position pos = pot.GetPosition();
         Position pos2 = pot2.GetPosition();
-
+        servo1.write(pos.getValue()); 
+        servo2.write(pos2.getValue()); 
+  
         DataPack payload;
         payload.addData(
             servo1_ID, 
