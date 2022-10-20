@@ -19,20 +19,24 @@ void setup(){
   Serial.begin(115200);
 }
 void loop(){
-    Position pos = pot.GetPosition();
-    Position pos2 = pot2.GetPosition();
+    if(millis()-timer > 100)
+    {
+        Position pos = pot.GetPosition();
+        Position pos2 = pot2.GetPosition();
 
-    DataPack payload;
-    payload.addData(
-        servo1_ID, 
-        uint16_t(pos.getValue())
-    );
-    payload.addData(
-        servo2_ID, 
-        uint16_t(pos2.getValue())
-    );
-    payload.write(Serial);
-    while (Serial.available()) {
-        Serial.read();
+        DataPack payload;
+        payload.addData(
+            servo1_ID, 
+            uint16_t(pos.getValue())
+        );
+        payload.addData(
+            servo2_ID, 
+            uint16_t(pos2.getValue())
+        );
+        payload.write(Serial);
+        while (Serial.available()) {
+            Serial.read();
+        }
+        timer = millis();
     }
 }
